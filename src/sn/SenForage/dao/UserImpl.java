@@ -29,6 +29,21 @@ private EntityManager em;
 		}
 		
 	}
+	@Override
+	public User getUserByEmailAndPassword(String email, String password) {
+		// TODO Auto-generated method stub
+		 try {
+	            return (User)em
+	                    .createQuery("select u from User u where u.email=:e and u.password=:p")
+	                    .setParameter("e",email)
+	                    .setParameter("p",password)
+	                    .getSingleResult();
+
+	        }catch (Exception e)
+	        {
+	            return null;
+	        }
+	}
 
 
 }

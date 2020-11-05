@@ -19,7 +19,7 @@
                           <tr>
                           	<td><c:out value="${client.id}"/></td>
                               <td><c:out value="${client.nomFamille}"/></td>
-                              <td><c:out value="${client.village}"/></td>
+                              <td><c:out value="${client.village.nomVillage}"/></td>
                               <td><c:out value="${client.adresse}"/></td>
                               <td><c:out value="${client.telephone}"/></td>
                           </tr>
@@ -57,7 +57,7 @@
 								name="adresse">
 						</div>
 						<div class="form-group">
-							<label>telephone</label> <input class="form-control" type="text"
+						<label>telephone</label> <input class="form-control" type="text"
 								name="telephone">
 						</div>
 						<div class="form-group">
@@ -68,6 +68,7 @@
 		      </div>
 	        </div>
 				
-				<jsp:include page="../../footer.jsp"></jsp:include>
+				
 				</div>
+				<jsp:include page="../../footer.jsp"></jsp:include>
 	
